@@ -5,14 +5,11 @@
         <li
           v-for="(data, index) in skills" :key="index"
         >
-          {{ index }}. {{ data.skill }}
+          {{ data.skill }}
         </li>
       </ul>
-      <p v-if="skills.length > 1">
-        You have more than one skill
-      </p>
-      <p v-else>
-        You have less than or equal to 1 skill
+      <p>
+        These are the skills that you possess.
       </p>
     </div>
   </div>
@@ -26,7 +23,12 @@ export default {
       skills: [
           { "skill": "Vue.js" },
           { "skill": "Frontend Developer" }
-      ]
+      ],
+      alertObject: {
+        bgColor: 'yellow',
+        bgWidth: '100%',
+        bgHeight: '30px'
+      }
     }
   }
 }
@@ -34,18 +36,32 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+  .holder {
+    background: #fff;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  ul li {
+    padding: 20px;
+    font-size: 1.3em;
+    background-color: #E0EDF4;
+    border-left: 5px solid #3EB3F6;
+    margin-bottom: 2px;
+    color: #3E5252;
+  }
+
+  p {
+    text-align:center;
+    padding: 30px 0;
+    color: gray;
+  }
+
+  .container {
+    box-shadow: 0px 0px 40px lightgray;
+  }
 </style>
