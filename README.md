@@ -1,5 +1,8 @@
 # my-skills-vue
 
+## Deployed version
+http://my-skills-vue.surge.sh/#/
+
 ## Project setup
 ```
 yarn install
